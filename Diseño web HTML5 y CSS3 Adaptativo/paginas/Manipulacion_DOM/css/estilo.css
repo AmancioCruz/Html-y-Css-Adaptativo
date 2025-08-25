@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+}
+
+.caja{
+    width: 50%;
+    height: 50%;
+}
+
+.elemento{
+    height: 200px;
+    border: 2px solid black;
+    background-color: aquamarine;
+}
+
+.imagen{
+    background-image: url("../recursos/imagen1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nueva-imagen{
+    background-image: url("../recursos/imagen2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.oculto{
+    display: none;
+}
+
+/*se utiliza el # al inicio de el nombre 
+cuando en lugar de una clase queremos dar estilo a un ID 
+en lugar de una clase
+#elemento-3{
+    background-image: url("../recursos/imagen1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}*/
