@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+.contenedor{
+    font-size: 50px;
+}
+
+.unidad-em{
+    font-size: 10em; /*vale 50px porque es relativo al contenedor padre*/
+}
+
+.unidad-rem{
+    font-size: 10rem; /*vale 100px porque es relativo al elemento raiz (root) html*/
+}
+
+.unidad-vw{
+    font-size: 10vw;
+}
+
+.unidad-vh{
+    font-size: 10vh;
+}
+
+.unidad-vmin{
+    font-size: 10vmin;
+}
+
+.unidad-vmax{
+    font-size: 10vmax;
+}
