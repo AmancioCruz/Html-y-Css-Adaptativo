@@ -1,30 +1,66 @@
-//guardamos una referencia a la etiqueta que tiene el Id texto
+// Referencias a los elementos del DOM
 let texto = document.getElementById("texto");
-let elemento =document.getElementById("elemento-2");
-let imagen = document.getElementById("elemento-3")
+let elemento = document.getElementById("elemento-2");
+let imagen = document.getElementById("elemento-3");
+let cajas = document.getElementsByClassName("caja");
 
-function cambiarTexto(){
-    texto.textContent = "hola"
+// Variables para guardar el estado original
+let textoOriginal = texto.textContent;
+let colorOriginal = elemento.style.backgroundColor;
+let tieneClaseImagen = imagen.classList.contains("imagen");
+let visibilidadOriginal = true;
+
+function cambiarTexto() {
+    if (texto.textContent === textoOriginal) {
+        texto.textContent = "hola";
+    } else {
+        texto.textContent = textoOriginal;
+    }
 }
 
-function cambiarColor(){
-    elemento.style.backgroundColor = "red";
+function cambiarColor() {
+    if (elemento.style.backgroundColor === "red") {
+        elemento.style.backgroundColor = colorOriginal;
+    } else {
+        // Guardar el color actual antes de cambiarlo
+        if (elemento.style.backgroundColor !== "red") {
+            colorOriginal = elemento.style.backgroundColor;
+        }
+        elemento.style.backgroundColor = "red";
+    }
 }
 
-function cambiarImagen(){
-    imagen.classList.remove("imagen");
-    imagen.classList.add("nueva-imagen");
+function cambiarImagen() {
+    if (imagen.classList.contains("nueva-imagen")) {
+        imagen.classList.remove("nueva-imagen");
+        if (tieneClaseImagen) {
+            imagen.classList.add("imagen");
+        }
+    } else {
+        // Guardar si tenía la clase imagen antes de cambiarla
+        tieneClaseImagen = imagen.classList.contains("imagen");
+        imagen.classList.remove("imagen");
+        imagen.classList.add("nueva-imagen");
+    }
 }
 
-function ocultar(){
-    let cajas = document.getElementsByClassName("caja");
-    cajas[0].classList.add("oculto");
-    cajas[1].classList.add("oculto");
-    cajas[2].classList.add("oculto");
-    console.log(cajas[0]);
+function ocultar() {
+    if (visibilidadOriginal) {
+        // Ocultar todas las cajas
+        for (let i = 0; i < cajas.length; i++) {
+            cajas[i].classList.add("oculto");
+        }
+        visibilidadOriginal = false;
+    } else {
+        // Mostrar todas las cajas
+        for (let i = 0; i < cajas.length; i++) {
+            cajas[i].classList.remove("oculto");
+        }
+        visibilidadOriginal = true;
+    }
 }
 
-//es otra forma de agregar eventos directamente en el documento.
-document.addEventListener("change",()=>{
-//aqui va todo el codigo que queramosa grenar
+// Event listener para cambios (ejemplo adicional)
+document.addEventListener("change", () => {
+    // Aquí va todo el código que queramos agregar
 });
