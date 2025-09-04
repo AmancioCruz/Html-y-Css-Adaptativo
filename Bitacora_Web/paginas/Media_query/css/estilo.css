@@ -1,0 +1,109 @@
+.seccion-contenido {
+    background: var(--blanco-puro);
+    border-radius: var(--radio-bordes);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--sombra-suave);
+    border-left: 5px solid var(--rosa-energetico);
+}
+
+.titulo-seccion {
+    color: var(--rosa-energetico);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--rosa-energetico);
+    border-radius: 2px;
+}
+
+.subtitulo-seccion {
+    color: var(--gris-oscuro);
+    margin: 1.8rem 0 1rem 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--gris-claro);
+    padding-bottom: 0.5rem;
+}
+
+.texto-seccion {
+    color: var(--gris-oscuro);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.texto-seccion strong {
+    color: var(--rosa-energetico);
+    font-weight: 600;
+}
+
+.lista-seccion {
+    color: var(--gris-oscuro);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.lista-seccion li {
+    margin-bottom: 0.8rem;
+}
+
+.lista-seccion strong {
+    color: var(--rosa-energetico);
+    font-weight: 600;
+}
+
+.codigo {
+    background-color: var(--negro-profundo);
+    color: var(--blanco-puro);
+    padding: 1.5rem;
+    border-radius: var(--radio-bordes);
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--rosa-energetico);
+}
+
+.codigo::before {
+    content: 'CSS';
+    display: block;
+    background-color: var(--rosa-energetico);
+    color: var(--blanco-puro);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .seccion-contenido {
+        padding: 1.5rem;
+    }
+    
+    .titulo-seccion {
+        font-size: 1.8rem;
+    }
+    
+    .subtitulo-seccion {
+        font-size: 1.3rem;
+    }
+    
+    .codigo {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}

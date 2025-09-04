@@ -1,0 +1,103 @@
+.contenedor {
+    background: var(--blanco-puro);
+    border-radius: var(--radio-bordes);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid var(--azul-primario);
+}
+
+.contenedor:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--gris-claro);
+    margin: 2rem 0;
+}
+
+
+.unidad-em {
+    color: var(--azul-informativo);
+    font-size: 2em; /* Usando em como unidad */
+    margin-bottom: 1em; /* Usando em como unidad */
+}
+
+.unidad-rem {
+    color: var(--azul-informativo);
+    font-size: 2rem; /* Usando rem como unidad */
+    margin-bottom: 1rem; /* Usando rem como unidad */
+}
+
+.unidad-vw {
+    color: var(--azul-informativo);
+    font-size: 3vw; /* Usando vw como unidad */
+    margin-bottom: 1vw; /* Usando vw como unidad */
+}
+
+.unidad-vh {
+    color: var(--azul-informativo);
+    font-size: 3vh; /* Usando vh como unidad */
+    margin-bottom: 1vh; /* Usando vh como unidad */
+}
+
+.unidad-vmin {
+    color: var(--azul-informativo);
+    font-size: 3vmin; /* Usando vmin como unidad */
+    margin-bottom: 1vmin; /* Usando vmin como unidad */
+}
+
+.unidad-vmax {
+    color: var(--azul-informativo);
+    font-size: 3vmax; /* Usando vmax como unidad */
+    margin-bottom: 1vmax; /* Usando vmax como unidad */
+}
+
+/* Ajustes para mantener la legibilidad en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .unidad-em {
+        font-size: 1.5em;
+    }
+    
+    .unidad-rem {
+        font-size: 1.5rem;
+    }
+    
+    .unidad-vw {
+        font-size: 4vw;
+    }
+    
+    .unidad-vh {
+        font-size: 4vh;
+    }
+    
+    .unidad-vmin {
+        font-size: 4vmin;
+    }
+    
+    .unidad-vmax {
+        font-size: 4vmax;
+    }
+}
+
+@media (min-width: 1200px) {
+    .unidad-vw {
+        font-size: 2.5vw;
+    }
+    
+    .unidad-vh {
+        font-size: 2.5vh;
+    }
+    
+    .unidad-vmin {
+        font-size: 2.5vmin;
+    }
+    
+    .unidad-vmax {
+        font-size: 2.5vmax;
+    }
+}

@@ -1,0 +1,21 @@
+/* Variables de colores */
+:root {
+    --azul-primario: #706fff;
+    --rosa-energetico: #ff70a6;
+    --coral-calido: #ff9770;
+    --amarillo-optimista: #ffd670;
+    --verde-lima: #e9ff70;
+    --negro-profundo: #1a1a2e;
+    --gris-oscuro: #3d3b52;
+    --gris-medio: #7b7986;
+    --gris-claro: #d1d1e0;
+    --blanco-hueso: #f8f9fc;
+    --blanco-puro: #ffffff;
+    --rojo-error: #ff4757;
+    --verde-confirmacion: #2ed573;
+    --naranja-alerta: #ff9f43;
+    --azul-informativo: #2f89fc;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --radio-bordes: 12px;
+}

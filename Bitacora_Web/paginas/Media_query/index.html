@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../../css/estilosGenerales.css">
+    <title>Media Query</title>
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <ul class="menu-navegacion">
+                <li class="item-menu"><a href="../../index.html" class="enlace-menu">Inicio</a></li>
+                <li class="item-menu"><a href="../Manipulacion_DOM/index.html" class="enlace-menu">Manipulación del DOM</a></li>
+                <li class="item-menu"><a href="../Unidades_Relativas/index.html" class="enlace-menu">Unidades Relativas</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="contenido-principal">
+        <main class="contenido-principal">
+    <!-- Sección de explicación -->
+    <section class="seccion-contenido">
+        <h2 class="titulo-seccion">Media Queries</h2>
+        <p class="texto-seccion">
+            Las <strong>Media Queries</strong> son una herramienta fundamental en CSS para crear diseños responsivos.
+            Permiten aplicar estilos distintos según las características del dispositivo o la ventana del navegador,
+            como el ancho, alto, resolución o tipo de pantalla.
+        </p>
+        
+        <h3 class="subtitulo-seccion">Sintaxis básica</h3>
+        <p class="texto-seccion">
+            La sintaxis de una media query es la siguiente:
+        </p>
+        <pre class="codigo">
+@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+        </pre>
+        <p class="texto-seccion">
+            En este ejemplo, cuando la pantalla tenga un ancho máximo de 600px, se aplicará un fondo azul claro.
+        </p>
+
+        <h3 class="subtitulo-seccion">Tipos de Media Queries</h3>
+        <ul class="lista-seccion">
+            <li><strong>max-width:</strong> Aplica estilos si el ancho de la ventana es menor o igual al valor definido.</li>
+            <li><strong>min-width:</strong> Aplica estilos si el ancho de la ventana es mayor o igual al valor definido.</li>
+            <li><strong>orientation:</strong> Aplica estilos según la orientación del dispositivo (portrait o landscape).</li>
+            <li><strong>resolution:</strong> Aplica estilos según la densidad de píxeles de la pantalla.</li>
+        </ul>
+
+        <h3 class="subtitulo-seccion">Ejemplo práctico</h3>
+        <p class="texto-seccion">
+            Un uso típico de media queries es modificar el diseño de un menú o el tamaño de texto según el dispositivo:
+        </p>
+        <pre class="codigo">
+/* Celulares */
+@media (max-width: 600px) {
+    .menu-navegacion {
+        flex-direction: column;
+    }
+    .texto-seccion {
+        font-size: 14px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .menu-navegacion {
+        flex-direction: row;
+    }
+    .texto-seccion {
+        font-size: 16px;
+    }
+}
+
+/* Computadoras */
+@media (min-width: 1025px) {
+    .menu-navegacion {
+        flex-direction: row;
+    }
+    .texto-seccion {
+        font-size: 18px;
+    }
+}
+        </pre>
+        <p class="texto-seccion">
+            Con estas reglas, el diseño de la página se adapta a celulares, tablets y computadoras, asegurando
+            una experiencia de usuario óptima.
+        </p>
+    </section>
+</main>
+
+    </main>
+    <footer>
+        <p>Bitácora de Aprendizaje - Diseño Web HTML5 y CSS Adaptativo</p>
+    </footer>
+</body>
+</html>
+

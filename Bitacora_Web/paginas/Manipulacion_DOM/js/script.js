@@ -12,7 +12,7 @@ let visibilidadOriginal = true;
 
 function cambiarTexto() {
     if (texto.textContent === textoOriginal) {
-        texto.textContent = "hola";
+        texto.textContent = "Texto 2";
     } else {
         texto.textContent = textoOriginal;
     }

@@ -1,0 +1,87 @@
+@import url(../css/colores.css);
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--blanco-hueso);
+    color: var(--negro-profundo);
+    line-height: 1.6;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    background: var(--azul-primario);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--sombra-media);
+}
+
+.contenedor-navegacion {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.item-menu {
+    position: relative;
+}
+
+.enlace-menu {
+    color: var(--blanco-puro);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.enlace-menu:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Contenido principal */
+.contenido-principal {
+    min-height: 64vh;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Footer */
+footer {
+    background: var(--gris-oscuro);
+    color: var(--blanco-puro);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    bottom: 0;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-navegacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+}

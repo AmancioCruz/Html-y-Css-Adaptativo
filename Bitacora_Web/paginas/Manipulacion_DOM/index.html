@@ -4,16 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../../css/estilosGenerales.css">
     <title>Manipulacion DOM</title>
 </head>
 <body>
-    <div class="contenedor">
+    <nav class="barra-navegacion">
+        <div class="contenedor-navegacion">
+            <ul class="menu-navegacion">
+                <li class="item-menu"><a href="../../index.html" class="enlace-menu">Inicio</a></li>
+                <li class="item-menu"><a href="../Media_query/index.html" class="enlace-menu">Media Queries</a></li>
+                <li class="item-menu"><a href="../Unidades_Relativas/index.html" class="enlace-menu">Unidades Relativas</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="contenido-principal">
+        <div class="contenedor">
         <div class="caja">
             <div class="elemento">
-                <p id="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Laudantium cum accusamus consequatur a commodi ut totam, 
-                    dolores excepturi, facilis deleniti modi nobis, 
-                    obcaecati quaerat.</p>
+                <p id="texto">Texto 1</p>
             </div>
             <input type="button" value="Cambiar texto" onclick="cambiarTexto()">
         </div>
@@ -27,14 +35,17 @@
             <input type="button" value="Cambiar Imagen" onclick="cambiarImagen()">
         </div>
         <div>
-            <div class="elemento"></div>
             <input type="button" value="Ocultar todo" onclick="ocultar()">
         </div>
-
     </div>
-    <!--Todos los archivos de javascript se deben de vincular al final de nuestro body 
+    </main>
+    <footer>
+        <p>Bitácora de Aprendizaje - Diseño Web HTML5 y CSS Adaptativo</p>
+    </footer>
+</body>
+<!--Todos los archivos de javascript se deben de vincular al final de nuestro body 
     ya que estos se deben ejecutar cuando todos los elementos del html se hayan cargado de forma correcta
     -->
     <script src="js/script.js"></script>
-</body>
 </html>
+
