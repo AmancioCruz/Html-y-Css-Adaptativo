@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+            <img 
+                src="recursos/imagen-600w.jpg"
+                srcset="recursos/imagen-300w.jpg 300w,
+                        recursos/imagen-600w.jpg 600w,
+                        recursos/imagen-900w.jpg 900w,
+                        recursos/imagen-1200w.jpg 1200w"
+                sizes="(max-width: 480px) 95vw,
+                      (max-width: 768px) 85vw,
+                      (max-width: 1200px) 1200px,
+                      65vw"
+                alt="Imagen responsiva"
+                class="imagen"
+                loading="lazy"
+            >
+        </div>
+</body>
+</html>
