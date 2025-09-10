@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Golden versity";
+    src: url("../recursos/tipografias/Golden\ Varsity\ Outline.woff2") format("woff2");
+    font-weight: bold;
+}
 .contenedor {
     background: var(--blanco-puro);
     border-radius: var(--radio-bordes);
@@ -23,13 +28,16 @@ hr {
 
 .unidad-em {
     color: var(--azul-informativo);
-    font-size: 2em; /* Usando em como unidad */
+    font-family:'Golden versity';
+    text-wrap: balance;/*Nos ayuda a que los textos largos se alinen de forma repsonsiva*/
+    font-size: clamp(3em, 1vw, 3em); /* Usando em como unidad */
     margin-bottom: 1em; /* Usando em como unidad */
 }
 
 .unidad-rem {
     color: var(--azul-informativo);
-    font-size: 2rem; /* Usando rem como unidad */
+    text-wrap: balance;
+    font-size: clamp(3rem, 5vw, 3rem ); /* Usando rem como unidad */
     margin-bottom: 1rem; /* Usando rem como unidad */
 }
 
@@ -99,5 +107,14 @@ hr {
     
     .unidad-vmax {
         font-size: 2.5vmax;
+    }
+}
+
+/*Es una forma de adaptarse al contexto del usuario el cual va a depender del tema
+que este tenga seleccionado en el dispositivo, sin embargo esto va a depender si 
+el navegador le da soporte o no a esta funcionalidad*/
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: aquamarine;
     }
 }
